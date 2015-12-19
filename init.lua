@@ -12,7 +12,7 @@ local crickets ={
 }
 
 -- Assinging sounds to nodes
-local areasound.sounds={
+local sounds={
 	{name = "fire:basic_flame",	def = {
 		sound = "areasound_fire"
 	}},
@@ -71,9 +71,7 @@ minetest.register_globalstep(function(dtime)
 		if r_sound then
 --			print("[areasound] r_sound = "..r_sound)
 			minetest.sound_play(r_sound, {pos=player_pos[player_name], max_hear_distance = AREA})
---			print("[areasound] Bling!")
 		else
---			print("[areasound] Zonk!")
 		end
 	end
 end)
